@@ -15,9 +15,7 @@ header {
 
 header .container {
     display: flex;
-    /* height: 600px; */
-    /* grid-template-areas: "text image";
-    grid-template-columns: 1fr 1fr; */
+    flex-wrap: wrap;
 }
 
 .container .container-text {
@@ -37,10 +35,8 @@ header .container {
 
 .container .container-text p {
     font-family: 'Alata', sans-serif;
-    margin: 0;
+    margin: 10px 0px;
     color: rgba(101, 95, 95, 1);
-    position: relative;
-    top: 10px;
 }
 
 .container .container-text h3 {
@@ -55,14 +51,12 @@ header .container img {
 /* About */
 #about {
     display: flex;
-    /* grid-template-areas: "left right";
-    grid-template-columns: 1fr 1fr; */
+    flex-wrap: wrap;
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
 #about .left {
-    /* grid-area: left; */
     flex: 1;
     font-family: 'Almarai', sans-serif;
     font-size: 30px;
@@ -235,8 +229,8 @@ footer .close a:hover {
     color: rgba(70, 113, 60, 1);
 }
 
-/* Tampilan pada tablet */
-@media(max-width: 1200px) {
+/* Responsive di tablet */
+@media(max-width: 900px) {
 
     /* About */
     #about .left p, #about .right p{
@@ -251,13 +245,61 @@ footer .close a:hover {
     #skill hr, #sosmed hr {
         width: 300px;
     }
+}
 
-    /* Skills */
-    /* #skill .container {
-        display: grid;
+/* Responsive Header */
+@media(max-width: 890px) {
+
+    /* Layout Text */
+    .container .container-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 
-    .container .keahlian img {
-        
-    } */
+    /* Header Image */
+    header .container img {
+        width: auto;
+    }
+}
+
+/* Responsive di Mobile */
+@media(max-width: 599px) {
+
+    /* Header */
+    header .container .container-text h1 {
+        font-size: 33px;
+    }
+
+    header .container .container-text p {
+        font-size: 12px;
+    }
+
+    /* About */
+    #about div.left, #about div.right {
+        position: relative;
+        text-align: justify;
+        margin: 0;
+    }
+
+    #about div.left p, #about div.right p {
+        margin: 15px 0;
+    }
+
+    #about .left img {
+        width: 100px;
+        position: absolute;
+        top: -20px;
+        right: -120px;
+    }
+
+    #about .right img {
+        width: 100px;
+        position: absolute;
+        bottom: -20px;
+        left: -120px;
+        transform: rotateY(180deg);
+    }
 }
