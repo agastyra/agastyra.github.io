@@ -1,9 +1,10 @@
-<script setup></script>
+<script setup>
+import Navbar from "./components/Navbar.vue";
+</script>
 
 <template>
-  <div class="text-center">
-    <h1>Hello, World!</h1>
-  </div>
+  <router-view class="font-lato"></router-view>
+  <Navbar />
 </template>
 
 <style scoped></style>
