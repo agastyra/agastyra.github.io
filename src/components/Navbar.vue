@@ -8,7 +8,7 @@ import {
 </script>
 
 <template>
-  <nav class="bg-theme-blue fixed bottom-0 min-w-full h-12 text-theme-light">
+  <nav class="bg-theme-green fixed bottom-0 min-w-full h-12 text-theme-light">
     <ul class="min-h-full flex flex-row justify-evenly items-center">
       <li>
         <router-link :to="{ name: 'Home' }">
